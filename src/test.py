@@ -6,7 +6,7 @@ as the project is expanded.
 
 Creation Date: 11/27/21
 Last Modified: 11/27/21
-Version: 1.0
+Version: 1.1
 """
 
 import sys
@@ -16,7 +16,7 @@ import simsogui
 from simso.core import Model
 from simso.configuration import Configuration
 
-from EDF_mono import EDF_mono
+from schedulers.EDF_mono import EDF_mono
 from SimBuilder import SimBuilder
 
 TASK_DIR = 'cpre558-final-project/task_files'
@@ -25,9 +25,13 @@ CONF_DIR = 'cpre558-final-project/graphic_config'
 
 def main(argv):
 	"""
-	Function: main.py
+	Function: main
 
-	This function will act as our entry point into application
+	This function acts as an entry point into our application. It shouldn't be called directly,
+	rather it should only be envoked by the if block below
+
+	:param argv: List of commandline arguments
+	:type argv: list
 	"""
 
 	if len(argv) == 1:

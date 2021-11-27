@@ -7,15 +7,25 @@ as specified by the config file.
 
 Creation Date: 11/27/2021
 Last Modified: 11/27/2021
-Version: 1.0
+Version: 1.1
 """
 
 import simsogui
 
-def main(argv):
+def main(argv: list):
+	"""
+	Function: main
+
+	This function acts as an entry point into our application. It shouldn't be called directly,
+	rather it should only be envoked by the if block below
+
+	:param argv: List of commandline arguments
+	:type argv: list
+	"""
+
 	if len(argv) == 1:
 		return 
-		
+
 	pass
 
 if __name__ == '__main__':
