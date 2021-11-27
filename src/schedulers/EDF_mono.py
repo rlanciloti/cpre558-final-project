@@ -25,4 +25,5 @@ class EDF_mono(Scheduler):
 		if not self.ready_list: return None
 
 		job = min(self.ready_list, key=lambda x: x.absolute_deadline)
+		return (job, cpu)
 
