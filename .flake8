@@ -1,0 +1,15 @@
+[flake8]
+
+max-line-length = 96
+
+ignore=
+	W191,
+	E251
+
+exclude=
+	.git,
+	.gitignore,
+	__pycache__,
+	*/__pycache__,
+	*.xml,
+	*/*.xml,

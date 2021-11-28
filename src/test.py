@@ -18,6 +18,7 @@ TASK_DIR = 'cpre558-final-project/task_files'
 SRC_DIR = 'cpre558-final-project/src'
 CONF_DIR = 'cpre558-final-project/graphic_config'
 
+
 def main(argv) -> None:
 	"""
 	Function: main
@@ -32,7 +33,7 @@ def main(argv) -> None:
 	if len(argv) == 1:
 		return
 
-	#sim = SimBuilder(f"{CONF_DIR}/parsing_test.xml")
+	# sim = SimBuilder(f"{CONF_DIR}/parsing_test.xml")
 	sim = SimBuilder(argv[1])
 	sim.run_model()
 

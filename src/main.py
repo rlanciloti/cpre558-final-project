@@ -13,6 +13,7 @@ Version: 1.2
 import sys
 import simsogui
 
+
 def main(argv: list) -> None:
 	"""
 	Function: main
@@ -28,6 +29,7 @@ def main(argv: list) -> None:
 		return None
 
 	return None
+
 
 if __name__ == '__main__':
 	main(sys.argv)

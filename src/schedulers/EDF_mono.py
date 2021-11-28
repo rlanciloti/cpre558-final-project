@@ -14,6 +14,7 @@ from simso.core import Job
 from simso.core.Processor import Processor
 from simso.core import Scheduler
 
+
 class EDF_Mono(Scheduler):
 	"""
 	Class: EDF_mono
