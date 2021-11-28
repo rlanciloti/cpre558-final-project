@@ -152,7 +152,7 @@ class SimBuilder:
 			return str(os.path.sep).join(val.split('\\')[-3:])
 
 		if '/' in val:
-			return str(os.path.sep).join(val.split('\\')[-3:])
+			return str(os.path.sep).join(val.split('/')[-3:])
 
 	def run_model(self) -> None:
 		"""
