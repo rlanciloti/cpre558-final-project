@@ -11,6 +11,7 @@ Version 1.2
 """
 
 import pytest
+import os
 from src.SimBuilder import SimBuilder
 
 FPATH_PREFIX = "tests"
@@ -27,7 +28,7 @@ def create_user_edf() -> SimBuilder:
 	:return: Instance of SimBuilder with EDF_mono as the scheduler
 	:rtype: SimBuilder
 	"""
-	return SimBuilder(f"{FPATH_PREFIX}\\user_edf_test.xml")
+	return SimBuilder(f"{FPATH_PREFIX}{os.path.sep}user_edf_test.xml")
 
 
 @pytest.fixture
@@ -41,7 +42,7 @@ def create_provided_edf() -> SimBuilder:
 	:return: Instance of SimBuilder with provided EDF_mono as the scheduler
 	:rtype: SimBuilder
 	"""
-	return SimBuilder(f"{FPATH_PREFIX}\\provided_edf_test.xml")
+	return SimBuilder(f"{FPATH_PREFIX}{os.path.sep}provided_edf_test.xml")
 
 
 def test_edf_equivalence(create_provided_edf: SimBuilder, create_user_edf: SimBuilder) -> None:
