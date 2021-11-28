@@ -7,12 +7,13 @@ as specified by the config file.
 
 Creation Date: 11/27/2021
 Last Modified: 11/27/2021
-Version: 1.1
+Version: 1.2
 """
 
+import sys
 import simsogui
 
-def main(argv: list):
+def main(argv: list) -> None:
 	"""
 	Function: main
 
@@ -29,5 +30,5 @@ def main(argv: list):
 	pass
 
 if __name__ == '__main__':
-	main()
+	main(sys.argv)
 	simsogui.run_gui()

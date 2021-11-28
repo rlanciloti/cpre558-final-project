@@ -9,8 +9,9 @@ Last Modified: 11/27/21
 Version: 1.1
 """
 
+from typing import Tuple
 from simso.core import Job
-from simso.core import CPU
+from simso.core.Processor import Processor
 from simso.core import Scheduler
 
 class EDF_mono(Scheduler):
@@ -25,7 +26,7 @@ class EDF_mono(Scheduler):
 	:type Scheduler: class
 	"""
 
-	def init(self):
+	def init(self) -> None:
 		"""
 		Function: init
 
@@ -34,7 +35,7 @@ class EDF_mono(Scheduler):
 
 		self.ready_list = list()
 
-	def on_activate(self, job: Job):
+	def on_activate(self, job: Job) -> None:
 		"""
 		Function: on_activate
 
@@ -47,7 +48,7 @@ class EDF_mono(Scheduler):
 
 		self.ready_list.append(job)
 
-	def on_terminated(self, job: Job):
+	def on_terminated(self, job: Job) -> None:
 		"""
 		Function: on_terminated
 
@@ -60,7 +61,7 @@ class EDF_mono(Scheduler):
 
 		self.ready_list.remove(job)
 
-	def schedule(self, cpu: CPU):
+	def schedule(self, cpu: Processor) -> Tuple:
 		"""Function: schedule
 
 		This is an override of a super class function. This function is triggered when the
@@ -68,9 +69,9 @@ class EDF_mono(Scheduler):
 		tuple contains a job and a CPU to run the job on.
 
 		:param cpu: Calling CPU, or the CPU which needs the scheuduler
-		:type cpu: CPU
+		:type cpu: Processor
 		:return: Tuple or list of tuples containing the Job and CPU to run said job
-		:rtype: Tuple/List<Tule> (Job, CPU)
+		:rtype: Tuple/List<Tule> (Job, Processor)
 		"""
 
 		if not self.ready_list: return None
