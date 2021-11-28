@@ -7,7 +7,7 @@ EDF scheduler works, then we have a solid example for the myopic scheduler.
 
 Creation Date: 11/28/21
 Last Modified: 11/28/21
-Version 1.0
+Version 1.1
 """
 
 import pytest
@@ -67,6 +67,6 @@ def test_edf_equivalence(create_provided_edf: SimBuilder, create_user_edf: SimBu
 	assert pmodel.logs == umodel.logs
 
 
-def false() -> None:
+def test_false() -> None:
 	""" Adding pytest to workflow, this makes sure it fails """
 	assert False

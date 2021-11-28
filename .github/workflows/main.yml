@@ -38,3 +38,6 @@ jobs:
         uses: py-actions/flake8@v1
         with:
           args: "--config setup.cfg"
+
+      - name: Run Pytests
+        uses: xoviat/actions-pytest@0.1-alpha2
