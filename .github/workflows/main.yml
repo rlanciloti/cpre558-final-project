@@ -35,4 +35,9 @@ jobs:
         uses: logikal-code/pip-install@v1.0.0
         
       - name: Running linting
-        run: flake8
+        run: |
+          echo "::set-output name=flake8-output::$(flake8)"
+        id: flake8-linting
+      
+      - name: Print Flake8 Output
+        run: echo ${{ steps.flake8-linting.flake8-output}}

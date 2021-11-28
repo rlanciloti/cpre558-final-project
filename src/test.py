@@ -32,6 +32,7 @@ def main(argv) -> None:
 	for log in model.logs:
 		print(log)
 
+
 if __name__ == '__main__':
 	main(sys.argv)
 	simsogui.run_gui()
