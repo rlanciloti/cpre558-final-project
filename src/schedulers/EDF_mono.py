@@ -1,5 +1,5 @@
 """
-File: edf_test.py
+File: EDF_Mono.py
 
 This file will hold code pertaining to EDF scheduling on a single core processor. This is
 example code for getting familiar with SimSo framework.
@@ -14,14 +14,14 @@ from simso.core import Job
 from simso.core.Processor import Processor
 from simso.core import Scheduler
 
-class EDF_mono(Scheduler):
+class EDF_Mono(Scheduler):
 	"""
 	Class: EDF_mono
 
 	This class is a sub-class of Scheduler which is a part of simso. Using this super class
 	allows us to create a custom scheduler. This is an implementation of EDF for a single core
 	processor.
-	
+
 	:param Scheduler: Super class
 	:type Scheduler: class
 	"""
@@ -74,8 +74,8 @@ class EDF_mono(Scheduler):
 		:rtype: Tuple/List<Tule> (Job, Processor)
 		"""
 
-		if not self.ready_list: return None
+		if not self.ready_list:
+			return None
 
 		job = min(self.ready_list, key=lambda x: x.absolute_deadline)
 		return (job, cpu)
-

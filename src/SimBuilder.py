@@ -12,8 +12,8 @@ Last Modified: 11/27/2021
 Version: 1.3
 """
 
-import xmltodict
 import os
+import xmltodict
 from simso.configuration import Configuration
 from simso.core import Model
 
@@ -70,7 +70,7 @@ class SimBuilder:
 		self.config.scheduler_info.filename = self._get_class_name(cd_sched.get('@className', ''))
 		if cd_sched.get('@class'):
 			self.config.scheduler_info.clas = cd_sched['@class']
-		
+
 		if isinstance(cd_proc, dict):
 			self.config.add_processor(
 				name = cd_proc["@name"],
@@ -95,11 +95,11 @@ class SimBuilder:
 		Function: _setup_task
 
 		This 'private' function will create and add tasks to the model. Technically it adds
-		them to the Configuration object. 
+		them to the Configuration object.
 		"""
 
 		td = self._conf_dict['tasks']['task']
-		
+
 		if isinstance(td, dict):
 			self.config.add_task(
 				name = td['@name'],
@@ -115,7 +115,7 @@ class SimBuilder:
 				wcet = float(td['@WCET']),
 				acet = int(td['@ACET']),
 				preemption_cost = int(td['@preemption_cost']),
-				et_stddev = float(td['@et_stddev']) 
+				et_stddev = float(td['@et_stddev'])
 			)
 		elif isinstance(td, list):
 			for task in td:
@@ -133,9 +133,9 @@ class SimBuilder:
 					wcet = float(task['@WCET']),
 					acet = float(task['@ACET']),
 					preemption_cost = int(task['@preemption_cost']),
-					et_stddev = float(task['@et_stddev']) 
+					et_stddev = float(task['@et_stddev'])
 				)
-	
+
 
 	def _get_class_name(self, val: str) -> str:
 		"""
@@ -157,10 +157,10 @@ class SimBuilder:
 		"""
 		Function: run_model
 
-		This function, when envoked by the end user, will execute the created model. This 
+		This function, when envoked by the end user, will execute the created model. This
 		function has to be called in order to retrieve information about the task set and how
 		the scheduler performed.
 		"""
-		
+
 		self.model.run_model()
 			

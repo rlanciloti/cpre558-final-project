@@ -11,11 +11,8 @@ Version: 1.2
 
 import sys
 import simsogui
-from simso.core import Model
-from simso.configuration import Configuration
 
-from src.schedulers.EDF_mono import EDF_mono
-from src.SimBuilder import SimBuilder
+from SimBuilder import SimBuilder
 
 TASK_DIR = 'cpre558-final-project/task_files'
 SRC_DIR = 'cpre558-final-project/src'
@@ -47,4 +44,4 @@ def main(argv) -> None:
 
 if __name__ == '__main__':
 	main(sys.argv)
-	#simsogui.run_gui()
+	simsogui.run_gui()

@@ -1,0 +1,8 @@
+[MASTER]
+
+disable=
+	W0311,
+	W0201,
+	E0401,
+	unspecified-encoding,
+	invalid-name

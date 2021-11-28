@@ -25,9 +25,9 @@ def main(argv: list) -> None:
 	"""
 
 	if len(argv) == 1:
-		return 
+		return None
 
-	pass
+	return None
 
 if __name__ == '__main__':
 	main(sys.argv)

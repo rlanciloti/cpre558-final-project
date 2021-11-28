@@ -6,7 +6,19 @@ This repository will eventually hold the source code for a myopic scheduler impl
 
 ## Setup Conda Environment
 
-Provided in this repo is a conda-environment.yml file. This can be used to spin up a conda environment that has all of the neccessary dependencies to run the project. If conda is installed, simply run `conda env create -f conda-environment.yml` and it will create the environment. Next, run `conda activate cpre558-final-proj` and this will set conda to use the newly created virtual environment. To leave this virtual environment. run `conda deactivate`. As long as the virtual enviornment hasn't been removed and installed successfully, it can be used by running the `conda activate cpre558-final-proj` command when it's not active.
+Provided in this repo is a conda-environment.yml file. This can be used to spin up a conda environment that has all of the neccessary dependencies to run the project. If conda is installed, simply run `conda env create -f conda-environment.yml` and it will create the environment. Next, run `conda activate cpre558-final-proj` and this will set conda to use the newly created virtual environment. To leave this virtual environment. run `conda deactivate`. As long as the virtual enviornment hasn't been removed and installed successfully, it can be used by running the `conda activate cpre558-final-proj` command when it's not active. To delete this enviroment, run `conda remove --name cpre558-final-proj --all`.
+
+Conversly, if conda is not installed, running `pip install requirements.txt`.
+
+## Pylint
+
+Pylint is setup to run on push to any repo and on pull-request to master. This is not optional and without passing pylint checks, no PR will make it into master. Currently there are a handful of rules disabled, however this can be changed to either remove or add more. The list of disabled rules are below:
+
+- `W0311`: Allows the use of tab (subject to change if spaces are prefered by both developers)
+- `W0211`: Allows class variables to be definied outside of the `__init__` function
+- `E0401`: Ignores import errors. Couldn't figure out how to satisfy import paths for both pylint and main.py
+- `unspecified-encoding`: Allows the use of `open()` without specifying `UTF-8`
+- `invalid-name`: Allows for classes to not follow Pascal casing and python files to not follow camel_casing. Although, please keep it somewhat consistent.
 
 ## Running the Myopic Scheduler
 
