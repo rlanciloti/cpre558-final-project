@@ -6,13 +6,14 @@ example code for getting familiar with SimSo framework.
 
 Creation Date: 11/27/21
 Last Modified: 11/27/21
-Version: 1.1
+Version: 1.2
 """
 
 from typing import Tuple
 from simso.core import Job
 from simso.core.Processor import Processor
 from simso.core import Scheduler
+
 
 class EDF_Mono(Scheduler):
 	"""
@@ -62,7 +63,8 @@ class EDF_Mono(Scheduler):
 		self.ready_list.remove(job)
 
 	def schedule(self, cpu: Processor) -> Tuple:
-		"""Function: schedule
+		"""
+		Function: schedule
 
 		This is an override of a super class function. This function is triggered when the
 		processor needs to run the scheduler. Returns a tuple or a list of tuples and each

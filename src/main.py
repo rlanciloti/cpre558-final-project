@@ -7,11 +7,12 @@ as specified by the config file.
 
 Creation Date: 11/27/2021
 Last Modified: 11/27/2021
-Version: 1.2
+Version: 1.3
 """
 
 import sys
 import simsogui
+
 
 def main(argv: list) -> None:
 	"""
@@ -28,6 +29,7 @@ def main(argv: list) -> None:
 		return None
 
 	return None
+
 
 if __name__ == '__main__':
 	main(sys.argv)
