@@ -19,6 +19,7 @@ from simso.core import Model
 
 
 class SimBuilder:
+
 	"""
 	Class: SimBuilder
 

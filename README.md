@@ -10,15 +10,13 @@ Provided in this repo is a conda-environment.yml file. This can be used to spin 
 
 Conversly, if conda is not installed, running `pip install requirements.txt`.
 
-## Pylint
+## Flake8/Pydocstyle
 
-Pylint is setup to run on push to any repo and on pull-request to master. This is not optional and without passing pylint checks, no PR will make it into master. Currently there are a handful of rules disabled, however this can be changed to either remove or add more. The list of disabled rules are below:
+Flake8 is setup to run on push to any repo and on pull-request to master. This is not optional and without passing pylint checks, no PR will make it into master. Currently there are a handful of configuration modification, these can be changed later if need be. The list of disabled rules and modified configs are below:
 
-- `W0311`: Allows the use of tab (subject to change if spaces are prefered by both developers)
-- `W0211`: Allows class variables to be definied outside of the `__init__` function
-- `E0401`: Ignores import errors. Couldn't figure out how to satisfy import paths for both pylint and main.py
-- `unspecified-encoding`: Allows the use of `open()` without specifying `UTF-8`
-- `invalid-name`: Allows for classes to not follow Pascal casing and python files to not follow camel_casing. Although, please keep it somewhat consistent.
+- `max-line-length`: This was changed to 96 because 79 feels too restrictive.
+- `W191`: Allows the use of tabs. This can be disabled later if the developers decide to go with spaces.
+- `E251`: Allows for multi-line parameters to be passed into functions. Nicer formatting.
 
 ## Running the Myopic Scheduler
 

@@ -19,7 +19,7 @@ SRC_DIR = 'cpre558-final-project/src'
 CONF_DIR = 'cpre558-final-project/graphic_config'
 
 
-def main(argv) -> None:
+def main(argv: list) -> None:
 	"""
 	Function: main
 

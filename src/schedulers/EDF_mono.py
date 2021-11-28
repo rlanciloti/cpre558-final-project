@@ -16,6 +16,7 @@ from simso.core import Scheduler
 
 
 class EDF_Mono(Scheduler):
+
 	"""
 	Class: EDF_mono
 
@@ -63,7 +64,8 @@ class EDF_Mono(Scheduler):
 		self.ready_list.remove(job)
 
 	def schedule(self, cpu: Processor) -> Tuple:
-		"""Function: schedule
+		"""
+		Function: schedule
 
 		This is an override of a super class function. This function is triggered when the
 		processor needs to run the scheduler. Returns a tuple or a list of tuples and each
