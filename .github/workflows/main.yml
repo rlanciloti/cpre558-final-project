@@ -24,7 +24,7 @@ jobs:
     steps:
       - name: Cloning Project Directory
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+        uses: actions/checkout@v2
       
       - name: Setup Python
         uses: actions/setup-python@v2.3.0
@@ -35,9 +35,9 @@ jobs:
         uses: logikal-code/pip-install@v1.0.0
         
       - name: Running linting
+        id: flake8-linting
         run: |
           echo "::set-output name=flake8-output::$(flake8)"
-        id: flake8-linting
       
       - name: Print Flake8 Output
         run: echo ${{ steps.flake8-linting.flake8-output}}
