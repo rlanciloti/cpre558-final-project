@@ -1,0 +1,5 @@
+name: cpre558-final-proj
+dependencies:
+  - python=3.8
+  - pip:
+    - -r requirements.txt
