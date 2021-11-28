@@ -9,7 +9,7 @@ interface.
 
 Creation Date: 11/27/2021
 Last Modified: 11/28/2021
-Version: 1.5
+Version: 1.6
 """
 
 import os
@@ -148,7 +148,11 @@ class SimBuilder:
 		:return: Fixed relative path for the scheduler file
 		:rtype: str
 		"""
-		return str(os.path.sep).join(val.split(os.path.sep)[-3:])
+		if '\\' in val:
+			return str(os.path.sep).join(val.split('\\')[-3:])
+
+		if '/' in val:
+			return str(os.path.sep).join(val.split('\\')[-3:])
 
 	def run_model(self) -> None:
 		"""
