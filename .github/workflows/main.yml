@@ -29,7 +29,7 @@ jobs:
       - name: Run Pylint
         uses: sunnysid3up/python-linter@v0.1-beta.7
         with: 
-            source: "**.py"
+            source: "**/*.py"
             strict: medium
             pylint-options: "--disable unused-import --disable W0311"
         
