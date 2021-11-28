@@ -9,7 +9,7 @@ This repository will eventually hold the source code for a myopic scheduler impl
 
 Provided in this repo is a conda-environment.yml file. This can be used to spin up a conda environment that has all of the neccessary dependencies to run the project. If conda is installed, simply run `conda env create -f conda-environment.yml` and it will create the environment. Next, run `conda activate cpre558-final-proj` and this will set conda to use the newly created virtual environment. To leave this virtual environment. run `conda deactivate`. As long as the virtual enviornment hasn't been removed and installed successfully, it can be used by running the `conda activate cpre558-final-proj` command when it's not active. To delete this enviroment, run `conda remove --name cpre558-final-proj --all`.
 
-Conversly, if conda is not installed, running `pip install requirements.txt`.
+Conversly, if conda is not installed, run `pip install requirements.txt` to install necessary python packages.
 
 ## Flake8
 
@@ -23,6 +23,8 @@ Flake8 is setup to run on push to any repo and on pull-request to master. This i
 - `D202`: Allows for blank line to exist after docstring
 - `D401`: Allows the first line to not be in the imperative mood
 - `SC200`: Won't do spell check on code
+
+***I HIGHLY recommend integrating Flake8 with your text editor of choice. It's very easy to set up with VSCode. I will not provide a walkthough with setting up flake8 with VSCode, I'll leave that as an exercise to the reader***
 
 ## Running the Myopic Scheduler
 
