@@ -35,4 +35,4 @@ jobs:
         uses: logikal-code/pip-install@v1.0.0
         
       - name: Running linting
-        run: python flake8
+        run: flake8
