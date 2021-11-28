@@ -10,4 +10,4 @@ PyQtWebEngine-Qt5==5.15.2
 xmltodict==0.12.0
 flake8
 flake8-annotations
-pycodestyle
+pydocstyle

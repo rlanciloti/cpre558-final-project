@@ -17,6 +17,9 @@ Flake8 is setup to run on push to any repo and on pull-request to master. This i
 - `max-line-length`: This was changed to 96 because 79 feels too restrictive.
 - `W191`: Allows the use of tabs. This can be disabled later if the developers decide to go with spaces.
 - `E251`: Allows for multi-line parameters to be passed into functions. Nicer formatting.
+- `ANN101`: Allows for `self` argument to exclude typing
+
+I will not be listing out the exlusions for pydocstyle because most of them did not make sense and there's a lot of them. I'll leave it as an exercise for the reader to explore these exceptions.
 
 ## Running the Myopic Scheduler
 
