@@ -6,7 +6,7 @@ as the project is expanded.
 
 Creation Date: 11/27/21
 Last Modified: 11/27/21
-Version: 1.2
+Version: 1.3
 """
 
 import sys
@@ -18,7 +18,8 @@ TASK_DIR = 'cpre558-final-project/task_files'
 SRC_DIR = 'cpre558-final-project/src'
 CONF_DIR = 'cpre558-final-project/graphic_config'
 
-def main(argv) -> None:
+
+def main(argv: list) -> None:
 	"""
 	Function: main
 
@@ -32,7 +33,6 @@ def main(argv) -> None:
 	if len(argv) == 1:
 		return
 
-	#sim = SimBuilder(f"{CONF_DIR}/parsing_test.xml")
 	sim = SimBuilder(argv[1])
 	sim.run_model()
 

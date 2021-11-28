@@ -9,13 +9,14 @@ interface.
 
 Creation Date: 11/27/2021
 Last Modified: 11/27/2021
-Version: 1.3
+Version: 1.4
 """
 
 import os
 import xmltodict
 from simso.configuration import Configuration
 from simso.core import Model
+
 
 class SimBuilder:
 	"""
@@ -47,7 +48,6 @@ class SimBuilder:
 		self.config.check_all()
 
 		self.model = Model(self.config)
-
 
 	def _setup_config(self) -> None:
 		"""
@@ -89,7 +89,6 @@ class SimBuilder:
 					speed = float(proc["@speed"])
 				)
 
-
 	def _setup_tasks(self) -> None:
 		"""
 		Function: _setup_task
@@ -110,7 +109,7 @@ class SimBuilder:
 				activation_date = int(td['@activationDate']),
 				list_activation_dates = td['@list_activation_dates'],
 				deadline = float(td['@deadline']),
-				base_cpi =float( td['@base_cpi']),
+				base_cpi =float(td['@base_cpi']),
 				mix = float(td['@mix']),
 				wcet = float(td['@WCET']),
 				acet = int(td['@ACET']),
@@ -128,14 +127,13 @@ class SimBuilder:
 					activation_date = float(task['@activationDate']),
 					list_activation_dates = task['@list_activation_dates'],
 					deadline = float(task['@deadline']),
-					base_cpi =float( task['@base_cpi']),
+					base_cpi =float(task['@base_cpi']),
 					mix = float(task['@mix']),
 					wcet = float(task['@WCET']),
 					acet = float(task['@ACET']),
 					preemption_cost = int(task['@preemption_cost']),
 					et_stddev = float(task['@et_stddev'])
 				)
-
 
 	def _get_class_name(self, val: str) -> str:
 		"""
@@ -163,4 +161,3 @@ class SimBuilder:
 		"""
 
 		self.model.run_model()
-			
