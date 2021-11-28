@@ -18,7 +18,7 @@ def main(argv) -> None:
 	rather it should only be envoked by the if block below
 
 	:param argv: List of commandline arguments
-	:type argv: list 
+	:type argv: list
 	"""
 
 	if len(argv) == 1:
