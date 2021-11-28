@@ -10,16 +10,18 @@ Provided in this repo is a conda-environment.yml file. This can be used to spin 
 
 Conversly, if conda is not installed, running `pip install requirements.txt`.
 
-## Flake8/Pydocstyle
+## Flake8
 
-Flake8 is setup to run on push to any repo and on pull-request to master. This is not optional and without passing pylint checks, no PR will make it into master. Currently there are a handful of configuration modification, these can be changed later if need be. The list of disabled rules and modified configs are below:
+Flake8 is setup to run on push to any repo and on pull-request to master. This is not optional and without passing flake8 checks, no PR will make it into master. Currently there are a handful of configuration modification, these can be changed later if need be. The list of disabled rules and modified configs are below:
 
 - `max-line-length`: This was changed to 96 because 79 feels too restrictive.
 - `W191`: Allows the use of tabs. This can be disabled later if the developers decide to go with spaces.
 - `E251`: Allows for multi-line parameters to be passed into functions. Nicer formatting.
 - `ANN101`: Allows for `self` argument to exclude typing
-
-I will not be listing out the exlusions for pydocstyle because most of them did not make sense and there's a lot of them. I'll leave it as an exercise for the reader to explore these exceptions.
+- `D400`: Allows first line of docstring to not end with a period
+- `D202`: Allows for blank line to exist after docstring
+- `D401`: Allows the first line to not be in the imperative mood
+- `SC200`: Won't do spell check on code
 
 ## Running the Myopic Scheduler
 

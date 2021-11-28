@@ -33,7 +33,6 @@ def main(argv: list) -> None:
 	if len(argv) == 1:
 		return
 
-	# sim = SimBuilder(f"{CONF_DIR}/parsing_test.xml")
 	sim = SimBuilder(argv[1])
 	sim.run_model()
 
