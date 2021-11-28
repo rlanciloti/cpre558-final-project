@@ -7,7 +7,7 @@ as specified by the config file.
 
 Creation Date: 11/27/2021
 Last Modified: 11/27/2021
-Version: 1.2
+Version: 1.3
 """
 
 import sys

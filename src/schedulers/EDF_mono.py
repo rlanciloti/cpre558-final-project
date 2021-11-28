@@ -6,7 +6,7 @@ example code for getting familiar with SimSo framework.
 
 Creation Date: 11/27/21
 Last Modified: 11/27/21
-Version: 1.1
+Version: 1.2
 """
 
 from typing import Tuple
