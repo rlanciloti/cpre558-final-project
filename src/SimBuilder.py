@@ -8,8 +8,8 @@ NOTE: This class will probably need to updated as more features are utilized in 
 interface.
 
 Creation Date: 11/27/2021
-Last Modified: 11/27/2021
-Version: 1.4
+Last Modified: 11/28/2021
+Version: 1.5
 """
 
 import os
@@ -44,7 +44,6 @@ class SimBuilder:
 		self._setup_config()
 		self._setup_tasks()
 
-		print(os.getcwd())
 		self.config.check_all()
 
 		self.model = Model(self.config)

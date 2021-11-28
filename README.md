@@ -21,7 +21,8 @@ Flake8 is setup to run on push to any repo and on pull-request to master. This i
 - `ANN101`: Allows for `self` argument to exclude typing
 - `D400`: Allows first line of docstring to not end with a period
 - `D202`: Allows for blank line to exist after docstring
-- `D401`: Allows the first line to not be in the imperative mood
+- `D401`: Allows the first line of a docstring to not be in the imperative mood
+- `D210`: Allows one line docstrings within functions
 - `SC200`: Won't do spell check on code
 
 ***I HIGHLY recommend integrating Flake8 with your text editor of choice. It's very easy to set up with VSCode. I will not provide a walkthough with setting up flake8 with VSCode, I'll leave that as an exercise to the reader***
