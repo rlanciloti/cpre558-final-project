@@ -27,9 +27,7 @@ jobs:
         uses: actions/checkout@v2
       
       - name: Run Pylint
-        uses: sunnysid3up/python-linter@v0.1-beta.7
-        with: 
-            source: "**/*.py"
-            strict: medium
-            pylint-options: "--disable unused-import --disable W0311"
+        uses: fylein/python-pylint-github-action@v1
+        with:
+            args: pip3 install -r requirements.txt && pylint --disable unused-imports --disable W0311 **/*.py
         
