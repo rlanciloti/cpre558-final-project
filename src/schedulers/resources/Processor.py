@@ -76,7 +76,7 @@ class Processor:
 		:rtype: str
 		"""
 
-		retval = "["
+		retval = f"{self.name}: ["
 
 		for t in self.job_list:
 			retval += f"({t[1]} | { t[0].name} | {t[0].wce_t + t[1]}), "
